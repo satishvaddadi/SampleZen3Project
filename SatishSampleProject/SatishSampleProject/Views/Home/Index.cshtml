@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container-fluid">
+    <div class="col-md-12">
+        <div class="image_block" style="margin-top:10%;text-align: center;">
+            <img id="my_image" style="width:1000px;height:500px" src="" />
+        </div>
+        <div style="text-align: center;margin-top: 2%;">
+            <button class="btn btn-primary change_image">Submit</button>
+        </div>
+    </div>
+
+</div>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.image_block').hide();
+        $('.change_image').on('click', function () {
+            $('.image_block').show();
+            //if ($("#my_image").attr("src") == "") {
+                $("#my_image").attr("src", "/Content/images/beach.jpg");
+            //} else {
+                //$("#my_image").attr("src", "/Content/images/river.jpg");
+            //}
+        });
+        
+    });
+</script>
